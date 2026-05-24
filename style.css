@@ -1,0 +1,154 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0f172a;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.timer-container {
+    text-align: center;
+    background: #1e293b;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    width: 360px;
+}
+
+h1 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Big live counting clock display style */
+#timerDisplay {
+    font-size: 3.8rem;
+    font-weight: bold;
+    color: #38bdf8;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+}
+
+.timer-setter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.time-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+}
+
+.time-column select {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #94a3b8;
+    background: #334155;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 5px 0;
+    outline: none;
+    cursor: pointer;
+    text-align-last: center;
+}
+
+.colon {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #475569;
+    padding-bottom: 20px;
+}
+
+.label {
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.adjust-btn {
+    background: #334155;
+    color: #94a3b8;
+    border: none;
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease;
+}
+
+.adjust-btn:hover {
+    background: #475569;
+    color: #ffffff;
+}
+
+.control-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.control-buttons button {
+    flex: 1;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.control-buttons button:active {
+    transform: scale(0.97);
+}
+
+#startBtn {
+    background: #16a34a;
+}
+
+#startBtn:hover {
+    background: #15803d;
+}
+
+#stopBtn {
+    background: #dc2626;
+}
+
+#stopBtn:hover {
+    background: #b91c1c;
+}
+
+#resetBtn {
+    background: #475569;
+}
+
+#resetBtn:hover {
+    background: #334155;
+}
+
+/* Dim/Hide list selectors cleanly when the clock is ticking down */
+.timer-setter.disabled {
+    opacity: 0.15;
+    pointer-events: none;
+}
